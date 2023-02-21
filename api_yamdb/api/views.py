@@ -2,12 +2,12 @@ from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, pagination, viewsets
+from reviews.models import Category, Genre, Review, Title
 
 from .filters import TitleFilter
 from .mixins import ListCreateDestroyViewSet
 from .permissions import (IsAdminOrReadOnly,
                           IsAuthorOrModeratorOrAdminOrReadOnly)
-from reviews.models import Category, Genre, Review, Title
 from .serializers import (CategorySerializer, CommentSerializer,
                           GenreSerializer, ReviewSerializer,
                           TitleListSerializer, TitleSerializer)
